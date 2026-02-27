@@ -1,0 +1,18 @@
+[Unit]
+Description=Smart Diff SvelteKit App
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/trung.thanh.phan@canonical.com/personal/detective
+Environment=NODE_ENV=production
+Environment=NVM_DIR=/home/ubuntu/.nvm
+EnvironmentFile=-/etc/default/detective
+ExecStartPre=/bin/bash -lc "source $NVM_DIR/nvm.sh && nvm use node >/dev/null && npm run build"
+ExecStart=/bin/bash -lc "source $NVM_DIR/nvm.sh && nvm use node >/dev/null && npm run preview -- --host 0.0.0.0 --port 3000"
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

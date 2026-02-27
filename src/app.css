@@ -1,0 +1,108 @@
+@import url("https://assets.ubuntu.com/v1/vanilla_framework_version_4_44_0_min.css");
+@import "highlight.js/styles/github.css";
+
+:root {
+	color-scheme: light;
+}
+
+.smartdiff-page {
+	background: #f7f7f7;
+	min-height: 100vh;
+	padding: 2.5rem 1rem;
+}
+
+.smartdiff-container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.smartdiff-card {
+	background: #ffffff;
+	padding: 1.5rem;
+	border: 1px solid #dcdcdc;
+}
+
+.smartdiff-code {
+	background: #ffffff;
+	border: 1px solid #dcdcdc;
+	padding: 1rem;
+	overflow-x: auto;
+	white-space: pre;
+	font-size: 0.75rem;
+}
+
+.diff-line {
+	display: block;
+	padding: 0 0.25rem;
+}
+
+.diff-added {
+	background: #e9f7ef;
+}
+
+.diff-removed {
+	background: #fdecea;
+}
+
+.smartdiff-grid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.smartdiff-stack > * + * {
+	margin-top: 1.5rem;
+}
+
+.smartdiff-stack--tight > * + * {
+	margin-top: 0.75rem;
+}
+
+.smartdiff-tag {
+	font-size: 0.65rem;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	padding: 0.25rem 0.5rem;
+	font-weight: 600;
+}
+
+.smartdiff-tag--modified {
+	background: #f6a93b;
+	color: #111;
+}
+
+.smartdiff-tag--added {
+	background: #3eb37f;
+	color: #0f1113;
+}
+
+.smartdiff-tag--removed {
+	background: #d9534f;
+	color: #fff;
+}
+
+.smartdiff-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.smartdiff-muted {
+	color: #666;
+}
+
+.smartdiff-tabs .p-tabs__list {
+	margin-bottom: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	border-bottom: 1px solid #dcdcdc;
+	padding-bottom: 0.5rem;
+}
+
+.smartdiff-tabs .p-tabs__item {
+	padding: 0.5rem 0.75rem;
+	margin: 0;
+}
