@@ -1,22 +1,6 @@
-# Smart Diff
+# Detective
 
-Smart Diff compares Python method changes in GitHub pull requests using Tree-sitter AST parsing.
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv create --template minimal --types ts --install npm detective
-```
+Detective compares Python method changes in GitHub pull requests using Tree-sitter AST parsing.
 
 ## Developing
 
